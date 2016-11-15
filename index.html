@@ -1,0 +1,275 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+    <head>
+        <title>Alpharabic - learn and read Arabic Alphabet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="description" content="Arabic language learning game learn Arabic vocaulary, words, letters and sounds. Learn reading, writing and correct pronunciation in Arabic."> <!-- Learn New Languages with Fluve -->
+
+    </head>
+    
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/createjs.js"></script>
+<script src="js/utils.js"></script>
+<script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+
+<script>
+var stage, canvas;
+var shape, txt, smiley;
+var w,h;
+var draw_min_bub_size=50;
+var img;
+var sq_size=50;
+var questions=[]; 
+var letters=[];
+var letter_dict={};
+var squares=[];
+var collected_letters=[];
+var word_letters=[];
+    
+function draw_bub(txt){
+    min_size=draw_min_bub_size;
+    label = new createjs.Text(txt, "bold 32px Arial", "#FFFFFF");
+    label.textAlign = "center";
+    label.textBaseline="middle";
+    //label.y = -7;
+    label_w=label.getMeasuredWidth();
+    size=Math.max(min_size,label_w*0.55)
+    
+    var circle = new createjs.Shape();
+    
+    circle.graphics.beginFill("red").drawCircle(0, 0, size);
+    var container = new createjs.Container();
+    container.width=size;
+    container.name=txt;
+    container.addChild(circle, label);
+    return container;
+}
+
+function draw_sq(txt, min_size){
+    //min_size=draw_min_bub_size;
+    color='#'+Math.floor(Math.random()*16777215).toString(16);
+    label = new createjs.Text(txt, "bold 32px Arial", "#FFFFFF");
+    label.textAlign = "center";
+    label.textBaseline="middle";
+    //label.y = -7;
+    label_w=label.getMeasuredWidth();
+    size=Math.max(min_size,label_w*0.55)
+    label.x=size*0.5;
+    label.y=size*0.5;
+    
+    
+    //var sq =new Graphics().beginFill("blue").rect(0, 0, size, size);
+    
+    
+    var sq = new createjs.Shape();
+    sq.graphics.beginFill(color).rect(0, 0, size, size);
+    //circle.graphics.beginFill("red").drawCircle(0, 0, size);
+    var container = new createjs.Container();
+    container.name=txt;
+    //container.width=size;
+    container.addChild(sq, label);
+    return container;
+}
+
+    
+function drawSmiley(size) {
+    var s = new createjs.Shape();
+    var g = s.graphics;
+
+    //Head
+    g.setStrokeStyle(10, 'round', 'round');
+    g.beginStroke("#000");
+    g.beginFill("#FC0");
+    g.drawCircle(0, 0, size); //55,53
+
+    //Mouth
+    g.beginFill(); // no fill
+    g.arc(0, 0, 0.6*size, 0, Math.PI);
+
+    //Right eye
+    g.beginStroke(); // no stroke
+    g.beginFill("#000");
+    g.drawCircle(-0.3*size, -0.3*size, 0.15*size);
+
+    //Left eye
+    g.drawCircle(0.3*size, -0.3*size, 0.15*size);
+
+    return s;
+}
+    
+function handleImageLoad(){
+    console.log(this)
+    bmp = new createjs.Bitmap(img);
+    stage.addChild(bmp);
+    bmp.x=w*0.5-bmp.getBounds().width*0.5;
+}
+  function init() {
+    canvas=document.getElementById("demoCanvas")
+    canvas.width = document.body.clientWidth;
+    canvas.height = document.body.clientHeight;
+    //canvas.width =  screen.availWidth;
+    //canvas.height = screen.availHeight;
+    w=canvas.width;
+    h=canvas.height;
+    sq_size=Math.min(w,h)*0.2
+
+    //canvas.style.height=h
+    //canvas.style.width=w;    
+    canvas.style.background = 'LightSkyBlue';
+    stage = new createjs.Stage("demoCanvas");
+      
+    //lets load the text file
+    $.ajax({
+		type: 'POST',
+		url: 'txt/arabic.txt'
+	}).done(function(data) {
+		   console.log(data);
+           lines=data.split("\n")
+           questions=[]
+           for (li in lines) {
+               split=lines[li].split("\t")
+               if (split.length>1) {
+                 if (split[0]=="sounds") {
+                    let0=$.trim(split[4])
+                    letters.push(let0)
+                    letter_dict[let0]=$.trim(split[3])+".mp3"
+                 } 
+                 questions.push(split)  
+               } 
+               
+           }
+           console.log(questions) 
+           start();
+    });
+
+    //xs=[w*0.2,w*0.4,w*0.6,w*0.8]
+    //ys=[h*0.3,h*0.5,h*0.7,h*0.9]
+
+
+      
+    /*
+    var stage = new createjs.Stage("demoCanvas");
+    var circle = new createjs.Shape();
+    circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 50);
+    circle.x = 100;
+    circle.y = 100;
+    stage.addChild(circle);      
+    // Create a new Text object, and position it on stage:
+    txt = new createjs.Text("Welcome to Champolu!", "36px Arial", "#FFF");
+    txt.x = 100;
+    txt.y = 80;
+    txt.rotation = 20;
+    //txt.outline = true;
+    stage.addChild(txt);
+
+    // this shape will be the background for the text:
+    shape = new createjs.Shape();
+    shape.x = txt.x;
+    shape.y = txt.y;
+    shape.rotation = txt.rotation;
+    //stage.addChild(shape);
+    stage.addChildAt(shape, 0);
+      
+    smiley=drawSmiley(100);
+    smiley.scaleX=0.2;
+    smiley.scaleY=0.2;
+      
+    smiley.x=200;
+    smiley.y=50;
+    stage.addChild(smiley);
+    */  
+      
+    var checkTime = setInterval(function() {
+        //circle.x+=3;
+        //shape.graphics.clear().beginFill("#F00").drawRect(-10, -10, txt.getMeasuredWidth() + 20, 36 + 20);
+        //console.log("H"+i)
+        stage.update()
+        //i+=1
+        //line_paused=true;
+      //console.log(currentTime, timeParameter[trId][1]);
+    }, 20);
+      
+  }
+    
+function start(){
+    console.log("starting game")
+    
+    q_id=Math.floor(Math.random() * 330-75) + 75  
+    cur_q=questions[q_id]
+    img = new Image();
+    img.src = "img/"+cur_q[2];
+    img.onload = handleImageLoad;
+
+    
+    word=$.trim(cur_q[4])
+    txt = new createjs.Text(word, "36px Arial", "Green");
+    txt.x = w*0.5;
+    txt.y = h*0.1;
+    txt.textAlign="center"
+    //txt.rotation = 20;
+    //txt.outline = true;
+    stage.addChild(txt);
+      
+    x0=(w-4*sq_size)*0.5
+    //x0=100;
+    y0=h*0.2;
+    xs=[x0,x0+sq_size,x0+2*sq_size,x0+3*sq_size]
+    ys=[y0,y0+sq_size,y0+2*sq_size,y0+3*sq_size]
+    //ys=[h*0.3,h*0.5,h*0.7,h*0.9]
+    
+
+    word_letters=word.split("")
+    filler_letters=shuffle(letters).slice(0, 16-word_letters.length);
+    console.log(filler_letters)
+    q_letters=filler_letters
+    for (wl in word_letters){
+        console.log(word_letters[wl])
+        q_letters.push(word_letters[wl])
+        
+    }
+    q_letters=shuffle(q_letters)
+    
+    q_let_counter=0;
+    squares=[]
+    
+    
+    
+    for (xi in xs){
+        for (yi in ys){
+            x=xs[xi];
+            y=ys[yi];
+            cur_let=q_letters[q_let_counter]
+            cur_sq=draw_sq(cur_let,sq_size)
+            stage.addChild(cur_sq)
+            squares.push(cur_sq)
+            cur_sq.addEventListener("click",check);
+            cur_sq.x=x;
+            cur_sq.y=y;
+            q_let_counter+=1
+            
+        }
+    }
+    
+
+
+    
+}
+
+function check(evt){
+    console.log(evt.target.parent.name)
+    clicked_letter=evt.target.parent.name
+    if (word_letters[collected_letters.length]==clicked_letter) {
+        console.log("correct")
+        collected_letters.push(clicked_letter)
+        stage.removeChild(evt.target.parent)
+    }
+}
+</script>    
+    
+
+<body onload="init();" onresize="resize();" style="margin:0;padding:0">    
+  <canvas id="demoCanvas" width="500" height="300"></canvas>
+</body>    
+</html>

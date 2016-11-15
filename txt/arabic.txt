@@ -1,0 +1,330 @@
+level_id	prereq	image	sound	arabic
+sounds			a	ا
+sounds			a2	أ
+sounds			e	إ
+sounds			b	ب
+sounds			t	ت
+sounds			th	ث
+sounds			j	ج
+sounds			7h	ح
+sounds			kh	خ
+sounds			d	د
+sounds			dh	ذ
+sounds			r	ر
+sounds			z	ز
+sounds			s	س
+sounds			sh	ش
+sounds			ss	ص
+sounds			dd	ض
+sounds			tt	ط
+sounds			ddh	ظ
+sounds			3a	ع
+sounds			gh	غ
+sounds			f	ف
+sounds			q	ق
+sounds			k	ك
+sounds			l	ل
+sounds			m	م
+sounds			n	ن
+sounds			h	ه
+sounds			w	و
+sounds			y	ي
+sounds			a_	ى
+sounds			2o	ؤ
+sounds			2e	ئ
+sounds			2a	ء
+letters_0_			alef	ا % ـا
+letters_0_			baa2	ب % بـ % ـبـ % ـب
+letters_0_			taa2	ت %تـ % ـتـ % ـت
+letters_0_			thaa2	ث % ثـ % ـثـ % ـث
+letters_0_			jeem	ج % جـ % ـجـ % ـج
+letters_0_			7aa2	ح % حـ % ـحـ % ـح
+letters_0_			khaa2	خ % خـ % ـخـ % ـخ
+letters_1_	letters_0_		daal	د % ـد
+letters_1_			dhaal	ذ % ـذ
+letters_1_			raa2	ر % ـر
+letters_1_			zaay	ز % ـز
+letters_1_			seen	س % سـ % ـسـ % ـس
+letters_1_			sheen	ش % شـ % ـشـ % ـش
+letters_1_			ssaad	ص % صـ % ـصـ % ـص
+letters_1_			daad	ض % ضـ % ـضـ % ـض
+letters_2_	letters_1_		taa2	ط % طـ % ـطـ % ـط
+letters_2_			dhaa2	ظ % ظـ % ـظـ % ـظ
+letters_2_			3ayn	ع % عـ % ـعـ % ـع
+letters_2_			ghayn	غ % غـ % ـغـ % ـغ
+letters_2_			faa2	ف % فـ % ـفـ % ـف
+letters_2_			qaaf	ق % قـ % ـقـ % ـق
+letters_2_			kaaf	ك % كـ % ـكـ % ـك
+letters_2_			laam	ل % لـ % ـلـ % ـل
+letters_3_	letters_2_		meem	م % مـ % ـمـ % ـم
+letters_3_			noon	ن % نـ % ـنـ % ـن
+letters_3_			haa2	ه % هـ % ـهـ % ـه
+letters_3_			waaw	و % ـو
+letters_3_			yaa2	ي % يـ % ـيـ % ـي
+letters_4_	letters_3_		laam_alef	لا % ـلا
+letters_4_			hamza	ء
+letters_4_			hamza_nabra	ئ % ئـ % ـئـ % ـئ
+letters_4_			hamza_waw	ؤ % ـؤ
+letters_4_			taa2_marbootah	ة % ـة
+letters_4_			alef_layyenah	ى % ـى
+letters_4_			alef_hamza_a	أ % ـأ 
+letters_4_			alef_hamza_e	إ % ـإ
+		0.png	sifr	صفر
+		1.png	waa7id	واحد
+		10.png	3asharah	عشرة
+		100.png	maa2ah	مائة
+		2.png	ithnaan	اثنان
+		3.png	thalaathah	ثلاثة
+		4.png	arba3ah	اربعة
+		5.png	khamsah	خمسة
+		6.png	sittah	ستة
+		7.png	sab3ah	سبعة
+		8.png	thamaaniyah	ثمانية
+		9.png	tis3ah	تسعة
+		airplane.png	taa2irah	طائرة
+		ambulance.png	sayyaarat-is3aaf	سيارة إسعاف
+		animal.png	7ayawaan	حيوان
+		ant.png	namlah	نملة
+		apple.png	toffaa7ah	تفاحة
+		avocado.png	avocado	أفوكادو
+		bag.png	7aqeebah	حقيبة
+		ball.png	korah	كرة
+		bank.png	masraf	مصرف
+		bat.png	witwaat	وطواط
+		bathtub.png	7awd-isti7maam	حوض استحمام
+		beach.png	shaati2	شاطئ
+		bear.png	dobb	دب
+		bed.png	sareer	سرير
+		bee.png	na7lah	نحلة
+		beetle.png	khonfosaa2	خنفساء
+		bell.png	jaras	جرس
+		bicycle.png	darraajah	دراجة
+		bird.png	taa2ir	طائر
+		black.png	aswad	أسود
+		blue.png	azraq	أزرق
+		book.png	kitaab	كتاب
+		box.png	sundooq	صندوق
+		boy.png	walad	ولد
+		bread.png	khubz	خبز
+		bride.png	3aroos	عروس
+		building.png	mabna	مبنى
+		bus.png	7aafilah	حافلة
+		cactus.png	sabbaar	صبار
+		camel.png	jamal	جمل
+		camera.png	aalat tasweer	آلة تصوير
+		candle.png	sham3ah	شمعة
+		candy.png	7alwaa	حلوى
+		car.png	sayyaarah	سيارة
+		carrot.png	jazarah	جزرة
+		castle.png	qal3ah	قلعة
+		cat.png	qittah	قطة
+		cheese.png	jubn	جبن
+		cherries.png	karaz	كرز
+		chick.png	katkoot	كتكوت
+		chicken.png	dajajah	دجاجة
+		child.png	tifl	طفل
+		chocolate.png	shokollatah	شوكولاتة
+		circle.png	daa2irah	دائرة
+		clap.png	tasfeeq	تصفيق
+		clock.png	saa3ah	ساعة
+		cloud.png	si7aabah	سحابة
+		coffee.png	qahwah	قهوة
+		corn.png	dhurah	ذرة
+		couch.png	areekah	أريكة
+		cow.png	baqarah	بقرة
+		creditcard.png	bitaaqah-i2timaaniyyah	بطاقة ائتمان
+		crown.png	taaj	تاج
+		cucumber.png	khiyaar	خيار
+		cup.png	ka2s	كأس
+		desert.png	sa7raa2	صحراء
+		dog.png	kalb	كلب
+		dolphin.png	darfeel	درفيل
+		donut.png	donut	دونت
+		door.png	baab	باب
+		dove.png	7amaamah	حمامة
+		dragon.png	tinneen	تنين
+		dress.png	fustaan	فستان
+		drum.png	tabl	طبل
+		duck.png	battah	بطة
+		eagle.png	nisr	نسر
+		ear.png	udhun	أذن
+		egg.png	baydah	بيضة
+		elephant.png	feel	فيل
+		eyes.png	3aynaan	عينان
+		factory.png	masna3	مصنع
+		fire.png	naar	نار
+		firetruck.png	sayyaarat-itfaa2	سيارة إطفاء
+		fish.png	samakah	سمكة
+		flag.png	3alam	علم
+		flashlight.png	kashaaf	كشاف
+		flower.png	wardah	وردة
+		food.png	ta3aam	طعام
+		fork.png	shawkah	شوكة
+		fountain.png	nafoorah	نافورة
+		fries.png	bataatis-maqliyyah	بطاطس مقلية
+		frog.png	dufda3	ضفدع
+		game.png	lu3bah	لعبة
+		garbage.png	sallat-muhmalaat	سلة مهملات
+		gasstation.png	ma7attat-waqood	محطة وقود
+		gear.png	tirs	ترس
+		girl.png	bint	بنت
+		glasses.png	nadhaarah	نظارة
+		goat.png	jady	جدي
+		gorilla.png	ghorilla	غوريلا
+		grapes.png	3inab	عنب
+		guitar.png	guitar	غيتار
+		hammer.png	mitraqah	مطرقة
+		hamster.png	hamster	هامستر
+		hat.png	qubba3ah	قبعة
+		heart.png	qalb	قلب
+		helicopter.png	helicopter	هليكوبتر
+		hole.png	thuqb	ثقب
+		honey.png	3asal	عسل
+		horse.png	7isaan	حصان
+		hotel.png	funduq	فندق
+		hotpepper.png	shattah	شطة
+		house.png	manzil	منزل
+		icecream.png	icecream	أيس كريم
+		insect.png	7asharah	حشرة
+		island.png	jazeerah	جزيرة
+		juice.png	3aseer	عصير
+		key.png	muftaa7	مفتاح
+		kiss.png	qublah	قبلة
+		kiwi.png	kiwi	كيوي
+		knife.png	sikkeen	سكين
+		koala.png	koala	كوالا
+		laptop.png	laptop	لابتوب
+		leaf.png	waraqah	ورقة
+		lemon.png	laymoon	ليمون
+		letter.png	khitaab	خطاب
+		lightbulb.png	lambah	لمبة
+		lightning.png	barq	برق
+		lion.png	asad	أسد
+		lizard.png	si7liyyah	سحلية
+		lock.png	qifl	قفل
+		lollipop.png	massaasah	مصاصة
+		magnifyingglass.png	3adasah	عدسة
+		man.png	rajul	رجل
+		map.png	khareetah	خريطة
+		medicine.png	dawaa2	دواء
+		microscope.png	microscope	ميكروسكوب
+		milk.png	laban	لبن
+		mobile.png	haatif-ma7mool	هاتف محمول
+		money.png	nuqood	نقود
+		monkey.png	qird	قرد
+		moon.png	qamar	قمر
+		mountain.png	jabal	جبل
+		mouse.png	fa2r	فأر
+		mouth.png	fam	فم
+		mushroom.png	3aish-al-ghuraab	عيش الغراب
+		music.png	museeqa	موسيقا
+		newspaper.png	jareedah	جريدة
+		nose.png	anf	أنف
+		octopus.png	okhtuboot	أخطبوط
+		owl.png	boomah	بومة
+		palmtree.png	nakhlah	نخلة
+		panda.png	panda	باندا
+		pants.png	bintaal	بنطال
+		peach.png	khokh	خوخ
+		peanuts.png	fuul-soodany	فول سوداني
+		pear.png	kummithra	كمثرى
+		pen.png	qalam	قلم
+		pencil.png	qalam-rusaas	قلم رصاص
+		penguin.png	batreeq	بطريق
+		phone.png	haatif	هاتف
+		piano.png	piano	بيانو
+		pig.png	khanzeer	خنزير
+		pineapple.png	ananaas	أناناس
+		pizza.png	pizza	بيتزا
+		plant.png	nabaat	نبات
+		policeman.png	rajul-shurtah	رجل شرطة
+		popcorn.png	fishaar	فيشار
+		potato.png	bataates	بطاطس
+		princess.png	ameerah	أميرة
+		rabbit.png	arnab	أرنب
+		rain.png	matar	مطر
+		rainbow.png	qaws-quza7	قوس قزح
+		red.png	a7mar	أحمر
+		rice.png	urz	أرز
+		road.png	tareeq	طريق
+		rocket.png	sarookh	صاروخ
+		run.png	jary	جري
+		sandwich.png	sandwich	ساندويتش
+		scales.png	meezaan	ميزان
+		school.png	madrasah	مدرسة
+		scissors.png	maqass	مقص
+		scooter.png	scooter	سكوتر
+		scorpion.png	3aqrab	عقرب
+		sheep.png	kharoof	خروف
+		ship.png	safeenah	سفينة
+		shirt.png	qamees	قميص
+		shoe.png	7idhaa2	حذاء
+		shop.png	matjar	متجر
+		shrimp.png	jambary	جمبري
+		snail.png	7alazon	حلزون
+		snake.png	thu3baan	ثعبان
+		snow.png	thalj	ثلج
+		soup.png	7isaa2	حساء
+		speak.png	kalaam	كلام
+		spider.png	3ankaboot	عنكبوت
+		spoon.png	mil3aqah	ملعقة
+		square.png	murabba3	مربع
+		squirrel.png	sinjaab	سنجاب
+		star.png	najmah	نجمة
+		strawberry.png	faraawlah	فراولة
+		sun.png	shams	شمس
+		sushi.png	sushi	سوشي
+		sweetpotato.png	bataatah	بطاطا
+		swim.png	sibaa7ah	سباحة
+		syringe.png	7uqnah	حقنة
+		taxi.png	taxi	تاكسي
+		tea.png	shaay	شاي
+		telescope.png	telescope	تلسكوب
+		tent.png	khaymah	خيمة
+		this.png	haadha	هذا
+		ticket.png	tadhkarah	تذكرة
+		tiger.png	nimr	نمر
+		toilet.png	mir7aad	مرحاض
+		tomato.png	tamaatim	طماطم
+		tongue.png	lisaan	لسان
+		tractor.png	jarraar	جرار
+		trafficlight.png	isharat-muroor	إشارة مرور
+		train.png	qitaar	قطار
+		tree.png	shajarah	شجرة
+		triangle.png	muthallath	مثلث
+		truck.png	shaa7inah	شاحنة
+		tshirt.png	t-shirt	تي شيرت
+		turkey.png	deek-roomy	ديك رومي
+		turtle.png	sul7ufaah	سلحفاة
+		umbrella.png	middhallah	مظلة
+		volcano.png	burkaan	بركان
+		walk.png	mashy	مشي
+		watch.png	saa3at-yadd	ساعة يد
+		water.png	miyaah	مياه
+		watermelon.png	batteekh	بطيخ
+		whale.png	7oot	حوت
+		white.png	abyad	أبيض
+		wolf.png	dhi2b	ذئب
+		woman.png	imra2ah	امرأة
+		worker.png	3aamil	عامل
+		write.png	kitaabah	كتابة
+		laugh.png	da7ik	ضحك
+		love.png	7ubb	حب
+		think.png	tafkeer	تفكير
+		fear.png	khawf	خوف
+		sleep.png	nawm	نوم
+		sad.png	7uzn	حزن
+		tired.png	ta3ab	تعب
+		angry.png	ghadab	غضب
+		danger.png	khatar	خطر
+		ghost.png	shaba7	شبح
+		fox.png	tha3lab	ثعلب
+		ox.png	thawr	ثور
+		deer.png	dhaby	ظبي
+		rhino.png	wa7eed-al-qarn	وحيد القرن
+		donkey.png	7imaar	حمار
+		luck.png	7adhdh	حظ
+		play.png	la3ib	لعب
+		shadow.png	dhill	ظل
+		strong.png	qowwah	قوة
+		victory.png	nasr	نصر
